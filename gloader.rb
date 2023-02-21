@@ -5,21 +5,21 @@
 class Gloader < Formula
   desc "gloader is database data migration tool from any source to any destination"
   homepage "https://github.com/mohammadv184/gloader"
-  version "0.1.0-dev.4"
+  version "0.1.0-dev.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.4/gloader-0.1.0-dev.4-darwin-arm64.tar.gz"
-      sha256 "005df5204b0afe93d50409cd54fdbca85a4a22176e8855f75e86814b5796cfae"
+      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.5/gloader-0.1.0-dev.5-darwin-arm64.tar.gz"
+      sha256 "68544feb327184b9ad5c7ef49ea98bf06e3251871bf6362fbfe79e08e8203318"
 
       def install
         bin.install "gloader"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.4/gloader-0.1.0-dev.4-darwin-amd64.tar.gz"
-      sha256 "b561fcee5d627407c566f8a43819ddd1be39731a21a9098cfcf72d3ee4cc179d"
+      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.5/gloader-0.1.0-dev.5-darwin-amd64.tar.gz"
+      sha256 "a55f762312a776f2ef6c6169f0bb3a77ff3d1140c1b69d8f9bee7b027b062167"
 
       def install
         bin.install "gloader"
@@ -28,25 +28,25 @@ class Gloader < Formula
   end
 
   on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.5/gloader-0.1.0-dev.5-linux-amd64.tar.gz"
+      sha256 "41fdda647a636edb28f7fec1f3671e89302d42f3d085f9f917d440f77ec841e2"
+
+      def install
+        bin.install "gloader"
+      end
+    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.4/gloader-0.1.0-dev.4-linux-arm64.tar.gz"
-      sha256 "3d03f42d656c913baed68c0f48bd24910aeebc272721a8c5f6d80aedb57abafa"
+      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.5/gloader-0.1.0-dev.5-linux-arm64.tar.gz"
+      sha256 "d36d6b6ff13a8637e39f12ee031a492d33b7da556463ad1cb6bfc35ee1e27543"
 
       def install
         bin.install "gloader"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.4/gloader-0.1.0-dev.4-linux-armv6.tar.gz"
-      sha256 "91dce0509b3a3eba77a187158ea3adb985811c38a51a4f8aee2466ff964c8f9a"
-
-      def install
-        bin.install "gloader"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.4/gloader-0.1.0-dev.4-linux-amd64.tar.gz"
-      sha256 "2caae852d21c30cafd7106a7d3b3d2fe63608fa475ebf99bcbe8f0c116586a01"
+      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.5/gloader-0.1.0-dev.5-linux-armv6.tar.gz"
+      sha256 "0d4c45f34bc7143cd668e8e5dd88f1ee11ad08192e5bc0e12484c25226fb4c17"
 
       def install
         bin.install "gloader"
