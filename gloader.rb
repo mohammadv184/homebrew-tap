@@ -5,81 +5,81 @@
 class Gloader < Formula
   desc "gloader is database data migration tool from any source to any destination"
   homepage "https://github.com/mohammadv184/gloader"
-  version "0.1.0-dev.21"
+  version "0.1.0-dev.22"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.21/gloader-0.1.0-dev.21-darwin-arm64.tar.gz"
-      sha256 "41d021a714e9122d7a7332d94fa3914c1e01b4310a56d53cb56d41796dee6af5"
+      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.22/gloader-0.1.0-dev.22-darwin-arm64.tar.gz"
+      sha256 "d1b595665494c8a2ce23fcf660cf5c3677cc090d07c29be373f407068c63462e"
 
       def install
         bin.install "gloader"
         ohai "Installing bash completion..."
-        bash_completion.install "completion/bash/gloader" => "gloader"
+        bash_completion.install "completions/bash/gloader" => "gloader"
         ohai "Installing zsh completion..."
-        zsh_completion.install "completion/zsh/gloader => _gloader"
+        zsh_completion.install "completions/zsh/gloader => _gloader"
         ohai "Installing fish completion..."
-        fish_completion.install "completion/fish/gloader"
+        fish_completion.install "completions/fish/gloader"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.21/gloader-0.1.0-dev.21-darwin-amd64.tar.gz"
-      sha256 "8590e37f3c8ba6c4858227180f6808d41606a6a81b582cb4df89fa4afd3a5da3"
+      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.22/gloader-0.1.0-dev.22-darwin-amd64.tar.gz"
+      sha256 "9ff75ce82d3437a7c96be126ea37c10c9bbcbe89379bb81dc7861af51af21724"
 
       def install
         bin.install "gloader"
         ohai "Installing bash completion..."
-        bash_completion.install "completion/bash/gloader" => "gloader"
+        bash_completion.install "completions/bash/gloader" => "gloader"
         ohai "Installing zsh completion..."
-        zsh_completion.install "completion/zsh/gloader => _gloader"
+        zsh_completion.install "completions/zsh/gloader => _gloader"
         ohai "Installing fish completion..."
-        fish_completion.install "completion/fish/gloader"
+        fish_completion.install "completions/fish/gloader"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.21/gloader-0.1.0-dev.21-linux-arm64.tar.gz"
-      sha256 "7f7d9e5bb1938f824bdc0afdacc0bf05f2b49cfb8c4e7ed5767d985d03dc5ca4"
+      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.22/gloader-0.1.0-dev.22-linux-arm64.tar.gz"
+      sha256 "336a80ddbc92b82de2368f7e66f7651de7051d38474108780d047e5f5c743518"
 
       def install
         bin.install "gloader"
         ohai "Installing bash completion..."
-        bash_completion.install "completion/bash/gloader" => "gloader"
+        bash_completion.install "completions/bash/gloader" => "gloader"
         ohai "Installing zsh completion..."
-        zsh_completion.install "completion/zsh/gloader => _gloader"
+        zsh_completion.install "completions/zsh/gloader => _gloader"
         ohai "Installing fish completion..."
-        fish_completion.install "completion/fish/gloader"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.21/gloader-0.1.0-dev.21-linux-amd64.tar.gz"
-      sha256 "02dc2932c886a83836536be3fea00e9bae9a02c4d289dde23839657626b0ff96"
-
-      def install
-        bin.install "gloader"
-        ohai "Installing bash completion..."
-        bash_completion.install "completion/bash/gloader" => "gloader"
-        ohai "Installing zsh completion..."
-        zsh_completion.install "completion/zsh/gloader => _gloader"
-        ohai "Installing fish completion..."
-        fish_completion.install "completion/fish/gloader"
+        fish_completion.install "completions/fish/gloader"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.21/gloader-0.1.0-dev.21-linux-armv6.tar.gz"
-      sha256 "d7c6ec0468782c186c80ddc86cc80d6e57250e5933e2893f9d65a37ef9c4906f"
+      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.22/gloader-0.1.0-dev.22-linux-armv6.tar.gz"
+      sha256 "b3c24a7c5221369eb1ef5d17457c5aaf60beae1323f260c96d1399c576f5f750"
 
       def install
         bin.install "gloader"
         ohai "Installing bash completion..."
-        bash_completion.install "completion/bash/gloader" => "gloader"
+        bash_completion.install "completions/bash/gloader" => "gloader"
         ohai "Installing zsh completion..."
-        zsh_completion.install "completion/zsh/gloader => _gloader"
+        zsh_completion.install "completions/zsh/gloader => _gloader"
         ohai "Installing fish completion..."
-        fish_completion.install "completion/fish/gloader"
+        fish_completion.install "completions/fish/gloader"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/mohammadv184/gloader/releases/download/v0.1.0-dev.22/gloader-0.1.0-dev.22-linux-amd64.tar.gz"
+      sha256 "606939e8e89c7c74dd6c59b132b7ecbfba65f1e6c755cce6956658beb2ab63ca"
+
+      def install
+        bin.install "gloader"
+        ohai "Installing bash completion..."
+        bash_completion.install "completions/bash/gloader" => "gloader"
+        ohai "Installing zsh completion..."
+        zsh_completion.install "completions/zsh/gloader => _gloader"
+        ohai "Installing fish completion..."
+        fish_completion.install "completions/fish/gloader"
       end
     end
   end
