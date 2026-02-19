@@ -10,10 +10,6 @@ cask "skm" do
   end
 
   binary "skm"
-  manpage "./assets/mandocs/skm.1.gz"
-  bash_completion "./assets/auto-completions/goreleaser.bash"
-  zsh_completion "./assets/auto-completions/goreleaser.zsh"
-  fish_completion "./assets/auto-completions/goreleaser.fish"
 
   on_macos do
     on_intel do
