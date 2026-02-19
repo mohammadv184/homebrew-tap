@@ -18,22 +18,22 @@ cask "skm" do
   on_macos do
     on_intel do
       url "https://github.com/mohammadv184/skm/releases/download/v#{version}/SKM-#{version}-darwin-amd64.tar.gz"
-      sha256 "8acdb09c4235e613513c9a13bec7cbad1bdc3f0bca81232d498a49c5718545b3"
+      sha256 "9bfa2d885011e3adcf1a0eb886b2385def9d445118dde235788e7b45d8ac4208"
     end
     on_arm do
       url "https://github.com/mohammadv184/skm/releases/download/v#{version}/SKM-#{version}-darwin-arm64.tar.gz"
-      sha256 "0a779685279a70e0f7033d4115761eccc5425966e7feb9ebaa4b86fa573522c4"
+      sha256 "3a1274a93070acdeb16bffb57c4cf10c1ab93d5a00c305cd402f220eb0d80e0a"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/mohammadv184/skm/releases/download/v#{version}/SKM-#{version}-linux-amd64.tar.gz"
-      sha256 "e617f8ff65ef3bf9ee853dfbea67c1a38f565c1b2d93b162081374a6d3ed7ec3"
+      sha256 "33f9f8a1fd6f9fb6dff23c981ae1bc2d37b20b0a218511e4f2e0a9f79dedd8ee"
     end
     on_arm do
       url "https://github.com/mohammadv184/skm/releases/download/v#{version}/SKM-#{version}-linux-arm64.tar.gz"
-      sha256 "7e6ec571981623fb6c3b20ec30db3cd904240536e04445636f9da20cc24ad70b"
+      sha256 "9dd340af0faf4e828a466113c74936a750e2422dcee2d37ee276cab9adff6462"
     end
   end
 
