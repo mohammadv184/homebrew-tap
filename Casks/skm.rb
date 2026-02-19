@@ -9,7 +9,7 @@ cask "skm" do
     skip "Auto-generated on release."
   end
 
-  binary "skm"
+  binary "SKM-#{version}-darwin-arm64/skm", target: "skm"
 
   on_macos do
     on_intel do
