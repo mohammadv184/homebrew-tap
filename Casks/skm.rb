@@ -3,33 +3,36 @@ cask "skm" do
   name "skm"
   desc "A CLI for managing FIDO2 security keys."
   homepage "https://github.com/mohammadv184/skm"
-  version "0.1.0"
+  version "0.1.1"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
-  binary "SKM-#{version}-darwin-arm64/skm", target: "skm"
+  binary "skm"
+  bash_completion "./assets/auto-completions/goreleaser.bash"
+  zsh_completion "./assets/auto-completions/goreleaser.zsh"
+  fish_completion "./assets/auto-completions/goreleaser.fish"
 
   on_macos do
     on_intel do
-      url "https://github.com/mohammadv184/skm/releases/download/v#{version}/SKM-#{version}-darwin-amd64.tar.gz"
-      sha256 "9bfa2d885011e3adcf1a0eb886b2385def9d445118dde235788e7b45d8ac4208"
+      url "https://github.com/mohammadv184/skm/releases/download/v#{version}/skm-#{version}-darwin-amd64.tar.gz"
+      sha256 "ce987fb4597f61d5556596925db48558f33c8e9d69551189a5dd2ffe04a38810"
     end
     on_arm do
-      url "https://github.com/mohammadv184/skm/releases/download/v#{version}/SKM-#{version}-darwin-arm64.tar.gz"
-      sha256 "3a1274a93070acdeb16bffb57c4cf10c1ab93d5a00c305cd402f220eb0d80e0a"
+      url "https://github.com/mohammadv184/skm/releases/download/v#{version}/skm-#{version}-darwin-arm64.tar.gz"
+      sha256 "95bf76e5cbb41fa6b1f337e2d89b10a2b3b612063f391a4fd44d4cf9d8e071f8"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/mohammadv184/skm/releases/download/v#{version}/SKM-#{version}-linux-amd64.tar.gz"
-      sha256 "33f9f8a1fd6f9fb6dff23c981ae1bc2d37b20b0a218511e4f2e0a9f79dedd8ee"
+      url "https://github.com/mohammadv184/skm/releases/download/v#{version}/skm-#{version}-linux-amd64.tar.gz"
+      sha256 "13505549a6af836e93220cc7ecc31eb82cf76c026b8092fafd9c6ca44f7095e6"
     end
     on_arm do
-      url "https://github.com/mohammadv184/skm/releases/download/v#{version}/SKM-#{version}-linux-arm64.tar.gz"
-      sha256 "9dd340af0faf4e828a466113c74936a750e2422dcee2d37ee276cab9adff6462"
+      url "https://github.com/mohammadv184/skm/releases/download/v#{version}/skm-#{version}-linux-arm64.tar.gz"
+      sha256 "95491a21c55c5073f038de9f29f10ffc213fb36aac8578cfa59efe0c963c46d8"
     end
   end
 
