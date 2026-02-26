@@ -11,9 +11,9 @@ cask "skm" do
 
   binary "skm"
   manpage "assets/mandocs/skm.1.gz"
-  bash_completion "assets/auto-completions/goreleaser.bash"
-  zsh_completion "assets/auto-completions/goreleaser.zsh"
-  fish_completion "assets/auto-completions/goreleaser.fish"
+  bash_completion "assets/auto-completions/skm.bash"
+  zsh_completion "assets/auto-completions/skm.zsh"
+  fish_completion "assets/auto-completions/skm.fish"
 
   on_macos do
     on_intel do
