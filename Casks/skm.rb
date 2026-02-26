@@ -10,29 +10,30 @@ cask "skm" do
   end
 
   binary "skm"
-  bash_completion "./assets/auto-completions/goreleaser.bash"
-  zsh_completion "./assets/auto-completions/goreleaser.zsh"
-  fish_completion "./assets/auto-completions/goreleaser.fish"
+  manpage "assets/mandocs/skm.1.gz"
+  bash_completion "assets/auto-completions/goreleaser.bash"
+  zsh_completion "assets/auto-completions/goreleaser.zsh"
+  fish_completion "assets/auto-completions/goreleaser.fish"
 
   on_macos do
     on_intel do
       url "https://github.com/mohammadv184/skm/releases/download/v#{version}/skm-#{version}-darwin-amd64.tar.gz"
-      sha256 "664fbc836c47f006e7d8a2d8049461fbfb31d4208240e0a92aeace154a33b9e9"
+      sha256 "6787a46fe928989d34ed4b9ec1280b2b4423b5fcbed51ddca380973bf23e7ea5"
     end
     on_arm do
       url "https://github.com/mohammadv184/skm/releases/download/v#{version}/skm-#{version}-darwin-arm64.tar.gz"
-      sha256 "fd3ae13f57af436f7d3bbeb816a82e4a2e7fabc6b93438268d08451f273eac19"
+      sha256 "ef4bdb43c2fd51a8bf13bd835931bb92a6b9345796ce077f4d9aaba72f8d1066"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/mohammadv184/skm/releases/download/v#{version}/skm-#{version}-linux-amd64.tar.gz"
-      sha256 "3b4cc1db9131220a314293431d4793bec91373692ac66eddfdc04b0ac8fa436e"
+      sha256 "4f488cd1a0d99649205d4dfc7fadb1ace69bd63a11de5eafdb79ebe191e734c3"
     end
     on_arm do
       url "https://github.com/mohammadv184/skm/releases/download/v#{version}/skm-#{version}-linux-arm64.tar.gz"
-      sha256 "5c9538e36bef40b19842e1a91c6114c97986ab4845af046c9c9cc611b6206593"
+      sha256 "2a9fcc89b97ef3aeda9e0f9c6e7f1612d65d3b952448ba29fa9f5cb621c112e2"
     end
   end
 
